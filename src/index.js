@@ -1,23 +1,26 @@
 // Importando o expressjs
 const express = require('express')
-
-//Importanto variaveis de ambiente
-require('dotenv').config()
-
 // Criando uma instância do expressjs
 const app = express()
+//Importanto variaveis de ambiente
+require('dotenv').config()
+const morgan = require('morgan')
+const bodyParser = require('body-parser')
+const cors = require('cors')
+const swaggerUi = require('swagger-ui-express')
+const YAML = require('yamljs')
+const swaggerDocument = YAML.load('./docs/swagger.yml')
+
+app.use(morgan('dev'))
+app.use('/api/v1/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument))
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded( {extended: true} ))
+app.use(cors());
 
 // Criando uma rota
 app.get('/', (req, res) => {
   res.send('<h1>Olá mundo!</h1>')
 })
-
-// Criando uma nova rota
-app.get('/api/v1', (req, res) => {
-    res.json({
-      message: "API Tarefas v1"
-    })
-  })
 
 // Rotas
 const tarefaRouter = require('./routes/tarefaRouter')

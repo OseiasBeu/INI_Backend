@@ -4,6 +4,9 @@ const tarefaController = require('../controllers/tarefaController')
 
 // Lista de rotas
 router.get('/', tarefaController.listar)
-
+router.get('/:id', tarefaController.listarPorId)
+router.post('/', tarefaController.inserir)
+router.put('/:id', tarefaController.alterar)
+router.delete('/:id', tarefaController.deletar)
 // Exportando as rotas
 module.exports = router

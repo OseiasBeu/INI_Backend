@@ -1,0 +1,137 @@
+{
+	"info": {
+		"_postman_id": "1a8b97ce-2db6-4994-941e-307d3b1d902f",
+		"name": "INI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Buscando por um evento",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3009/api/v1/tarefas/43",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3009",
+					"path": [
+						"api",
+						"v1",
+						"tarefas",
+						"43"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listando todos os eventos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3009/api/v1/tarefas/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3009",
+					"path": [
+						"api",
+						"v1",
+						"tarefas",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Inserção de eventos",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"descricao\": \"Seminário de cura e libertação\",\r\n    \"data\": \"2021-10-05T13:00:00.000Z\",\r\n    \"realizado\": 0,\r\n    \"categoria_id\": 5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3009/api/v1/tarefas/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3009",
+					"path": [
+						"api",
+						"v1",
+						"tarefas",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deletando Eventos",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3009/api/v1/tarefas/35",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3009",
+					"path": [
+						"api",
+						"v1",
+						"tarefas",
+						"35"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fazendo a alteração de eventos",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"descricao\": \"Seminario Profético 2\",\r\n        \"data\": \"2018-10-03T15:00:00.000Z\",\r\n        \"realizado\": 0\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3009/api/v1/tarefas/37",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3009",
+					"path": [
+						"api",
+						"v1",
+						"tarefas",
+						"37"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
