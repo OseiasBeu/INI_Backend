@@ -19,6 +19,8 @@
     "express": "^4.17.1",
     "morgan": "^1.10.0",
     "mysql": "^2.18.1",
+    "pg": "^8.5.1",
+    "pg-cursor": "^2.5.2",
     "swagger-ui-express": "^4.1.6",
     "yamljs": "^0.3.0"
   }
