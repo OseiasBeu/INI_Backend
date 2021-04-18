@@ -1,4 +1,6 @@
 // Se vamos acessar um banco de dados precisamos do módulo que faz isso
+
+//Criar uma rota para vizualização de todas as tarefas e não somenta as que ainda não foram concluidas
 const conexao = require('../config/conexao')
 conexao.connect();
 

@@ -26,6 +26,9 @@ app.get('/', (req, res) => {
 const tarefaRouter = require('./routes/tarefaRouter')
 app.use('/api/v1/tarefas', tarefaRouter)
 
+const categoriaRouter = require('./routes/categoriaRouter')
+app.use('/api/v1/categorias', categoriaRouter)
+
 
 // Configurando o servidor
 const port = process.env.PORT
