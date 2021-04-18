@@ -5,7 +5,7 @@ const conexao = require('../config/conexao')
 conexao.connect();
 
 exports.listar = (req, response) => {
-  const query = 'select data,c.descricao as categoria,t.descricao FROM public.tarefas as t inner join public.categorias as c on t.categoria_id = c.id where t.realizado = false'
+  const query = 'select t.id,data,c.descricao as categoria,t.descricao FROM public.tarefas as t inner join public.categorias as c on t.categoria_id = c.id where t.realizado = false'
   conexao.query(query, (err, res) => {
     // console.log(err, res.rows)
     if (err){

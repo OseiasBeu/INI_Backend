@@ -6,132 +6,325 @@
 	},
 	"item": [
 		{
-			"name": "Buscando por um evento",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:3009/api/v1/tarefas/43",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3009",
-					"path": [
-						"api",
-						"v1",
-						"tarefas",
-						"43"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Listando todos os eventos",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:3009/api/v1/tarefas/",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3009",
-					"path": [
-						"api",
-						"v1",
-						"tarefas",
-						""
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Inserção de eventos",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"descricao\": \"Seminário de cura e libertação\",\r\n    \"data\": \"2021-10-05T13:00:00.000Z\",\r\n    \"realizado\": 0,\r\n    \"categoria_id\": 5\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
+			"name": "Dev",
+			"item": [
+				{
+					"name": "Eventos",
+					"item": [
+						{
+							"name": "Inserção de eventos",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"descricao\": \"Seminário de cura e libertação v4\",\r\n    \"data\": \"2021-10-05T13:00:00.000Z\",\r\n    \"realizado\": 0,\r\n    \"categoria_id\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3009/api/v1/tarefas/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3009",
+									"path": [
+										"api",
+										"v1",
+										"tarefas",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Listando todos os eventos",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3009/api/v1/tarefas",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3009",
+									"path": [
+										"api",
+										"v1",
+										"tarefas"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Deletando Eventos",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3009/api/v1/tarefas/17",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3009",
+									"path": [
+										"api",
+										"v1",
+										"tarefas",
+										"17"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Fazendo a alteração de eventos",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": " {\r\n        \"descricao\": \"Seminario Profético 5\",\r\n        \"data\": \"2022-10-03T15:00:00.000Z\",\r\n        \"realizado\": 1,\r\n        \"categoria_id\": 5\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3009/api/v1/tarefas/10",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3009",
+									"path": [
+										"api",
+										"v1",
+										"tarefas",
+										"10"
+									]
+								}
+							},
+							"response": []
 						}
-					}
+					]
 				},
-				"url": {
-					"raw": "http://localhost:3009/api/v1/tarefas/",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3009",
-					"path": [
-						"api",
-						"v1",
-						"tarefas",
-						""
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Deletando Eventos",
-			"request": {
-				"method": "DELETE",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:3009/api/v1/tarefas/35",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3009",
-					"path": [
-						"api",
-						"v1",
-						"tarefas",
-						"35"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Fazendo a alteração de eventos",
-			"request": {
-				"method": "PUT",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": " {\r\n        \"descricao\": \"Seminario Profético 2\",\r\n        \"data\": \"2018-10-03T15:00:00.000Z\",\r\n        \"realizado\": 0\r\n    }",
-					"options": {
-						"raw": {
-							"language": "json"
+				{
+					"name": "Categoria",
+					"item": [
+						{
+							"name": "Listando todas as categorias",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3009/api/v1/categorias",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3009",
+									"path": [
+										"api",
+										"v1",
+										"categorias"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Inserção de categorias",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"descricao\": \"Estudo Bíblico\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3009/api/v1/categorias/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3009",
+									"path": [
+										"api",
+										"v1",
+										"categorias",
+										""
+									]
+								}
+							},
+							"response": []
 						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:3009/api/v1/tarefas/37",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3009",
-					"path": [
-						"api",
-						"v1",
-						"tarefas",
-						"37"
 					]
 				}
-			},
-			"response": []
+			]
+		},
+		{
+			"name": "Prod",
+			"item": [
+				{
+					"name": "Eventos",
+					"item": [
+						{
+							"name": "Inserção de eventos",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"descricao\": \"Seminário de cura e libertação v3\",\r\n    \"data\": \"2021-10-05T13:00:00.000Z\",\r\n    \"realizado\": 0,\r\n    \"categoria_id\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://ini-digital.herokuapp.com/api/v1/tarefas/",
+									"protocol": "http",
+									"host": [
+										"ini-digital",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"v1",
+										"tarefas",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Listando todos os eventos",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"descricao\": \"Seminário de cura e libertação v3\",\r\n    \"data\": \"2021-10-05T13:00:00.000Z\",\r\n    \"realizado\": 0,\r\n    \"categoria_id\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://ini-digital.herokuapp.com/api/v1/tarefas/",
+									"protocol": "http",
+									"host": [
+										"ini-digital",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"v1",
+										"tarefas",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Categoria",
+					"item": [
+						{
+							"name": "Listando todas as categorias",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"descricao\": \"Seminário de cura e libertação v3\",\r\n    \"data\": \"2021-10-05T13:00:00.000Z\",\r\n    \"realizado\": 0,\r\n    \"categoria_id\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://ini-digital.herokuapp.com/api/v1/categorias/",
+									"protocol": "http",
+									"host": [
+										"ini-digital",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"v1",
+										"categorias",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Listando todas as categorias Copy",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"descricao\": \"Adoração Profética\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://ini-digital.herokuapp.com/api/v1/categorias/",
+									"protocol": "http",
+									"host": [
+										"ini-digital",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"v1",
+										"categorias",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
 		}
 	]
 }
