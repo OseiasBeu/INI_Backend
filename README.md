@@ -11,3 +11,17 @@
 - [ ] Criar uma rota para exibir categorias
 - [ ] Trazer o ID e a status de realização do evento
 - [ ] Fazer Autenticação JWT
+- [ ] Incluir formulário de alteração de eventos - admin
+- [ ] Incluir formulário de remoção de eventos - admin
+- [ ] Verificar bug de agenda no index
+- [ ] Criar Rota para artigos. Campos: Imagem (url), Titulo, Descrição 
+- [ ] Criar controller para artigos
+- [ ] Criar tabela no banco de dados para artigos. Campos: imagem(url), titulo, descrição 
+- [ ] Adicionar imagens corretas ao index
+- [ ] Adicionar textos corretos ao index
+- [ ] Alterar fonte do texto no index
+- [ ] Alterar cores do index
+- [ ] Incluir campo de url (imagem) par eventos
+- [ ] Estruturar uma servidor de imagens gratuito 
+
+
