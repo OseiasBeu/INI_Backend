@@ -23,5 +23,6 @@
 - [ ] Alterar cores do index
 - [ ] Incluir campo de url (imagem) par eventos
 - [ ] Estruturar uma servidor de imagens gratuito 
+- [ ] Adicionar hiperlink nas opções do menu
 
 
