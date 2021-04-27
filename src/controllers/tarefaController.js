@@ -21,26 +21,25 @@ exports.listar = (req, response) => {
     }
   })
   }
+exports.listarTodas = (req, response) => {
+  const query = 'select t.id,data,c.descricao as categoria,t.descricao FROM public.tarefas as t inner join public.categorias as c on t.categoria_id = c.id'
+  conexao.query(query, (err, res) => {
+    // console.log(err, res.rows)
+    if (err){
+      console.log(err)
+      response.status(500)
+      response.json({"message": "Internal Server Error"})
+    } else if (res.rows.length > 0){
+      response.status(200)
+      response.json(res.rows)
+    } else {
+      res.status(404)
+      res.json({"message": "Nenhuma tarefa cadastrada com esse id"})
+    }
+  })
+  }
 
-// exports.listar2 = (req, res) => {
-//   let descricao = req.query.f || ""
-//   descricao = "%" + descricao + "%"
-//   const query = 'select t.id, t.descricao, t.data, t.realizado, c.descricao as categoria, c.cor from tarefas t, categorias c where t.categoria_id = c.id and t.descricao like $1'
-//   conexao.query(query, [descricao], (err, rows) => { {
-//     if (err){
-//       console.log(err)
-//       res.status(500)
-//       res.json({"message": "Internal Server Error"})
-//     } else if (rows.length > 0){
-//       res.status(200)
-//       res.json(rows)
-//     } else {
-//       res.status(404)
-//       res.json({"message": "Nenhuma tarefa cadastrada para esta busca"})
-//     }
-//     }
-//   })
-// }
+
 
 exports.listarPorId = (req, response) => {
   const id = req.params.id
