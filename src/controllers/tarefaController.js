@@ -22,7 +22,7 @@ exports.listar = (req, response) => {
   })
   }
 exports.listarTodas = (req, response) => {
-  const query = 'select t.id,data,c.descricao as categoria,t.descricao FROM public.tarefas as t inner join public.categorias as c on t.categoria_id = c.id'
+  const query = 'select t.id,data,c.descricao as categoria,t.descricao, t.realizado FROM public.tarefas as t inner join public.categorias as c on t.categoria_id = c.id'
   conexao.query(query, (err, res) => {
     // console.log(err, res.rows)
     if (err){
