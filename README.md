@@ -9,8 +9,8 @@
 - [x] Criar uma rota para vizualização de todas os eventos e não somente os que foram concluidos
 - [ ] Criar uma rota para vizualização de todas as categorias e não somenta as que ainda não foram concluidas
 - [ ] Ainda falta criar a nova rota de lsitagem de produtos
-- [ ] Criar uma rota para exibir categorias
-- [ ] Trazer o ID e a status de realização do evento
+- [x] Criar uma rota para exibir categorias
+- [x] Trazer o ID e a status de realização do evento
 - [ ] Fazer Autenticação JWT
 - [ ] Incluir formulário de alteração de eventos - admin
 - [ ] Incluir formulário de remoção de eventos - admin
