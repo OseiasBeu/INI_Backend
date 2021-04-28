@@ -29,6 +29,8 @@ app.use('/api/v1/tarefas', tarefaRouter)
 const categoriaRouter = require('./routes/categoriaRouter')
 app.use('/api/v1/categorias', categoriaRouter)
 
+const artigosRouter = require('./routes/artigosRouter')
+app.use('/api/v1/artigos', artigosRouter)
 
 // Configurando o servidor
 const port = process.env.PORT

@@ -43,7 +43,7 @@
 							"response": []
 						},
 						{
-							"name": "Listando todos os eventos",
+							"name": "Listando todos os eventos que nõa foram concluidos",
 							"request": {
 								"method": "GET",
 								"header": [],
@@ -58,6 +58,28 @@
 										"api",
 										"v1",
 										"tarefas"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Listando todos os eventos",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3009/api/v1/tarefas/todas",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3009",
+									"path": [
+										"api",
+										"v1",
+										"tarefas",
+										"todas"
 									]
 								}
 							},
@@ -111,6 +133,85 @@
 										"v1",
 										"tarefas",
 										"10"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Artigos",
+					"item": [
+						{
+							"name": "Inserção de artigos",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"linkimagem\": \"https://i3.wp.com/www.gospelprime.com.br/wp-content/uploads/2019/11/rei-davi-1000x600.jpg\",\r\n    \"titulo\": \"Rei Davi\",\r\n    \"descricao\":\"A história de Davi é uma das mais conhecidas da Bíblia Sagrada. O rei Davi foi o segundo monarca de Israel, o homem escolhido por Deus para liderar seu povo. A vida de Davi é narrada no Antigo Testamento, nos livros de 1 e 2 Samuel, 1 Reis e 1 Crônicas.\",\r\n    \"linkartigo\": \"https://www.editoracoffea.com.br/post/o-que-%C3%A9-a-alma\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3009/api/v1/artigos/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3009",
+									"path": [
+										"api",
+										"v1",
+										"artigos",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Listando todos os artigos",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3009/api/v1/artigos",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3009",
+									"path": [
+										"api",
+										"v1",
+										"artigos"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Deletando Eventos",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3009/api/v1/tarefas/17",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3009",
+									"path": [
+										"api",
+										"v1",
+										"tarefas",
+										"17"
 									]
 								}
 							},
@@ -190,7 +291,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"descricao\": \"Seminário de cura e libertação v3\",\r\n    \"data\": \"2021-10-05T13:00:00.000Z\",\r\n    \"realizado\": 0,\r\n    \"categoria_id\": 2\r\n}",
+									"raw": "{\r\n    \"descricao\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris scelerisque sed turpis ut scelerisque. Proin dictum lacus metus, quis consectetur dui bibendum quis.\",\r\n    \"data\": \"2021-10-05T13:00:00.000Z\",\r\n    \"realizado\": 0,\r\n    \"categoria_id\": 13\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -216,7 +317,7 @@
 							"response": []
 						},
 						{
-							"name": "Listando todos os eventos",
+							"name": "Listando todos os eventos que não foram concluidos",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -245,6 +346,52 @@
 										"v1",
 										"tarefas",
 										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Deletando Eventos",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://ini-digital.herokuapp.com/api/v1/tarefas/37",
+									"protocol": "http",
+									"host": [
+										"ini-digital",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"v1",
+										"tarefas",
+										"37"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Listando todos os evendos",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://ini-digital.herokuapp.com/api/v1/tarefas/todas",
+									"protocol": "http",
+									"host": [
+										"ini-digital",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"v1",
+										"tarefas",
+										"todas"
 									]
 								}
 							},
