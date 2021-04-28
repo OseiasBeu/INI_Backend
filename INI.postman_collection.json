@@ -470,6 +470,86 @@
 							"response": []
 						}
 					]
+				},
+				{
+					"name": "Artigos",
+					"item": [
+						{
+							"name": "Inserção de artigos",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"linkimagem\": \"https://i3.wp.com/www.gospelprime.com.br/wp-content/uploads/2019/11/rei-davi-1000x600.jpg\",\r\n    \"titulo\": \"Rei Davi\",\r\n    \"descricao\":\"A história de Davi é uma das mais conhecidas da Bíblia Sagrada. O rei Davi foi o segundo monarca de Israel, o homem escolhido por Deus para liderar seu povo. A vida de Davi é narrada no Antigo Testamento, nos livros de 1 e 2 Samuel, 1 Reis e 1 Crônicas.\",\r\n    \"linkartigo\": \"https://www.editoracoffea.com.br/post/o-que-%C3%A9-a-alma\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://ini-digital.herokuapp.com/api/v1/artigos",
+									"protocol": "http",
+									"host": [
+										"ini-digital",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"v1",
+										"artigos"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Listando todos os artigos",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://ini-digital.herokuapp.com/api/v1/artigos",
+									"protocol": "http",
+									"host": [
+										"ini-digital",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"v1",
+										"artigos"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Deletando Eventos",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3009/api/v1/tarefas/17",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3009",
+									"path": [
+										"api",
+										"v1",
+										"tarefas",
+										"17"
+									]
+								}
+							},
+							"response": []
+						}
+					]
 				}
 			]
 		}
