@@ -12,6 +12,8 @@
 - [x] Criar tabela no banco de dados para artigos. Campos: imagem(url), titulo, descrição 
 - [x] Criar uma rota para exibir categorias
 - [x] Trazer o ID e a status de realização do evento
+- [ ] Criar script que faz requisições a rota de artigos
+- [ ] Exibir artigos no frontend
 - [ ] Criar uma rota para vizualização de todas as categorias e não somenta as que ainda não foram concluidas
 - [ ] Ainda falta criar a nova rota de lsitagem de produtos
 - [ ] Fazer Autenticação JWT
