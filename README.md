@@ -17,7 +17,8 @@
 - [x] Ajsutar layout responsivo dos artigos
 - [x] Exibir artigos no frontend
 - [x] Criar uma rota para vizualização de todas as categorias e não somenta as que ainda não foram concluidas
-- [ ] Fazer adição do atributo do url da imagem nos eventos
+- [x] Fazer adição do atributo do url da imagem nos eventos
+- [ ] Adicionar atributo lin da imagem ao campo de inserção - admin
 - [ ] Ainda falta criar a nova rota de lsitagem de produtos
 - [ ] Fazer Autenticação JWT
 - [ ] Incluir formulário de alteração de eventos - admin
