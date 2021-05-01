@@ -12,10 +12,12 @@
 - [x] Criar tabela no banco de dados para artigos. Campos: imagem(url), titulo, descrição 
 - [x] Criar uma rota para exibir categorias
 - [x] Trazer o ID e a status de realização do evento
-- [ ] Criar script que faz requisições a rota de artigos
-- [ ] Adicionar atributo autor para a rota artigos
-- [ ] Exibir artigos no frontend
-- [ ] Criar uma rota para vizualização de todas as categorias e não somenta as que ainda não foram concluidas
+- [x] Criar script que faz requisições a rota de artigos
+- [x] Adicionar atributo autor para a rota artigos
+- [x] Ajsutar layout responsivo dos artigos
+- [x] Exibir artigos no frontend
+- [x] Criar uma rota para vizualização de todas as categorias e não somenta as que ainda não foram concluidas
+- [ ] Fazer adição do atributo do url da imagem nos eventos
 - [ ] Ainda falta criar a nova rota de lsitagem de produtos
 - [ ] Fazer Autenticação JWT
 - [ ] Incluir formulário de alteração de eventos - admin
