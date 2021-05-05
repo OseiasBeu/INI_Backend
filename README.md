@@ -20,7 +20,8 @@
 - [x] Fazer adição do atributo do url da imagem nos eventos
 - [ ] Adicionar atributo lin da imagem ao campo de inserção - admin
 - [ ] Ainda falta criar a nova rota de lsitagem de produtos
-- [ ] Fazer Autenticação JWT
+- [x] Fazer Autenticação JWT
+- [ ] Criar rota para apenas para as listagens de adm- admin
 - [ ] Incluir formulário de alteração de eventos - admin
 - [ ] Incluir formulário de remoção de eventos - admin
 - [ ] Verificar bug de agenda no index
