@@ -43,7 +43,7 @@
 							"response": []
 						},
 						{
-							"name": "Listando todos os eventos que nõa foram concluidos",
+							"name": "Listando todos os eventos que não foram concluidos",
 							"request": {
 								"method": "GET",
 								"header": [],
@@ -275,6 +275,207 @@
 							"response": []
 						}
 					]
+				},
+				{
+					"name": "Adm",
+					"item": [
+						{
+							"name": "Eventos",
+							"item": [
+								{
+									"name": "ADM [EVENTOS]- Deletando Eventos",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:3009/api/v1/admRouter/44",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3009",
+											"path": [
+												"api",
+												"v1",
+												"admRouter",
+												"44"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "ADM [EVENTOS]- Inserção de eventos",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"descricao\": \"Seminário de cura e libertação v5\",\r\n    \"data\": \"2021-10-05T13:00:00.000Z\",\r\n    \"realizado\": 0,\r\n    \"categoria_id\": 3\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:3009/api/v1/admRouter/inserirevento",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3009",
+											"path": [
+												"api",
+												"v1",
+												"admRouter",
+												"inserirevento"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "ADM [EVENTOS]- Listando todos os eventos",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:3009/api/v1/admRouter/eventos",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3009",
+											"path": [
+												"api",
+												"v1",
+												"admRouter",
+												"eventos"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Artigos",
+							"item": [
+								{
+									"name": "ADM [ARTIGOS]- Inserção de artigos",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"linkimagem\": \"https://i3.wp.com/www.gospelprime.com.br/wp-content/uploads/2019/11/rei-davi-1000x600.jpg\",\r\n    \"titulo\": \"Rei Davi V2\",\r\n    \"descricao\":\"A história de Davi é uma das mais conhecidas da Bíblia Sagrada. O rei Davi foi o segundo monarca de Israel, o homem escolhido por Deus para liderar seu povo. A vida de Davi é narrada no Antigo Testamento, nos livros de 1 e 2 Samuel, 1 Reis e 1 Crônicas.\",\r\n    \"linkartigo\": \"https://www.editoracoffea.com.br/post/o-que-%C3%A9-a-alma\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:3009/api/v1/admRouter/inserirartigos",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3009",
+											"path": [
+												"api",
+												"v1",
+												"admRouter",
+												"inserirartigos"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "ADM [ARTIGOS] - Listando todos os artigos",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:3009/api/v1/admRouter/artigos",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3009",
+											"path": [
+												"api",
+												"v1",
+												"admRouter",
+												"artigos"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Categoria",
+							"item": [
+								{
+									"name": "ADM [CATEGORIAS] - Listando todas as categorias",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:3009/api/v1/admRouter/categorias",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3009",
+											"path": [
+												"api",
+												"v1",
+												"admRouter",
+												"categorias"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Inserção de categorias Copy",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"descricao\": \"Teologia\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:3009/api/v1/admRouter/inserircategoria",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3009",
+											"path": [
+												"api",
+												"v1",
+												"admRouter",
+												"inserircategoria"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
 				}
 			]
 		},
@@ -481,7 +682,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"linkimagem\": \"https://i3.wp.com/www.gospelprime.com.br/wp-content/uploads/2019/11/rei-davi-1000x600.jpg\",\r\n    \"titulo\": \"Rei Davi\",\r\n    \"descricao\":\"A história de Davi é uma das mais conhecidas da Bíblia Sagrada. O rei Davi foi o segundo monarca de Israel, o homem escolhido por Deus para liderar seu povo. A vida de Davi é narrada no Antigo Testamento, nos livros de 1 e 2 Samuel, 1 Reis e 1 Crônicas.\",\r\n    \"linkartigo\": \"https://www.editoracoffea.com.br/post/o-que-%C3%A9-a-alma\"\r\n}",
+									"raw": "{\r\n    \"linkimagem\": \"https://static.wixstatic.com/media/11062b_1adc0a2203a9476aa80e004b484d4481~mv2_d_4096_2731_s_4_2.jpg/v1/fill/w_730,h_487,al_c,q_90,usm_0.66_1.00_0.01/11062b_1adc0a2203a9476aa80e004b484d4481~mv2_d_4096_2731_s_4_2.webp\",\r\n    \"titulo\": \"Proteção angelical em caminhos estabelecidos\",\r\n    \"descricao\":\"Nosso assunto desta manhã foi a aspersão do sangue do Cordeiro Pascal nos umbrais e nas vigas superiores das portas das casas dos filhos de Israel (Êx 12:7) e do Egito. Assim que isso foi feito, e o cordeiro fora comido, eles tiveram que começar...\",\r\n    \"linkartigo\": \"https://www.editoracoffea.com.br/post/prote%C3%A7%C3%A3o-angelical-em-caminhos-estabelecidos\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
