@@ -35,6 +35,9 @@ app.use('/api/v1/artigos', artigosRouter)
 const admRouter = require('./routes/admRouter')
 app.use('/api/v1/admRouter', admRouter)
 
+const apiRouter = require('./routes/apiRouter')
+app.use('/api/v1/auth', apiRouter)
+
 // Configurando o servidor
 const port = process.env.PORT
 app.listen(port, () => { console.log(`Servidor rodando na porta ${port}`) })

@@ -1,5 +1,5 @@
 // Importações necessárias
-const conexao = require('../config/conexao')
+// const conexao = require('../config/conexao')
 const jwt  = require('jsonwebtoken')
 const bcrypt = require('bcrypt')
 require('dotenv').config()
