@@ -23,6 +23,7 @@ conexao.connect();
 exports.login = (req, res) => {
     const email = req.body.email
     const senha = req.body.senha
+    // bcrypt.hash(senha, 10).then((res) => console.log(res));
   
     const query = 'select * from usuarios where email = $1'
   
@@ -38,11 +39,9 @@ exports.login = (req, res) => {
       } else if (rows['rows'].length > 0){
         console.log(senha)
         console.log(rows['rows'][0].senha)
-        // const hash = bcrypt.hashSync(rows['rows'][0].senha, 10);
-        // bcrypt.compareSync(senha, hash, (err, resp) => {
         bcrypt.compare(senha, rows['rows'][0].senha, (err, resp) => {
           console.log(resp)
-          if (!resp){
+          if (resp){
             const usuario = rows['rows'][0].id
             console.log(usuario)
             jwt.sign({usuario}, process.env.SECRET, {expiresIn: 30}, (err, token) => {
@@ -90,7 +89,7 @@ exports.verificar = (req, res, next) => {
           auth: false,
           message: 'Falha de autenticação'
         })
-        next()
+        // next()
       } else {
         next()
       }
