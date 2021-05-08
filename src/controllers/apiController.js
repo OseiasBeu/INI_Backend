@@ -27,7 +27,6 @@ exports.login = (req, res) => {
     const query = 'select * from usuarios where email = $1'
   
     conexao.query(query, [email], (err, rows) => {
-  
       if (err){        
         console.log(err)
         res.status(500)
@@ -36,10 +35,16 @@ exports.login = (req, res) => {
           "message": "Internal Server Error"
         })
      
-      } else if (rows.length > 0){
-        bcrypt.compare(senha, rows[0].senha, (err, resp) => {
-          if (resp){
-            const usuario = rows[0].id
+      } else if (rows['rows'].length > 0){
+        console.log(senha)
+        console.log(rows['rows'][0].senha)
+        // const hash = bcrypt.hashSync(rows['rows'][0].senha, 10);
+        // bcrypt.compareSync(senha, hash, (err, resp) => {
+        bcrypt.compare(senha, rows['rows'][0].senha, (err, resp) => {
+          console.log(resp)
+          if (!resp){
+            const usuario = rows['rows'][0].id
+            console.log(usuario)
             jwt.sign({usuario}, process.env.SECRET, {expiresIn: 30}, (err, token) => {
               res.status(200)
               res.json({
@@ -48,7 +53,7 @@ exports.login = (req, res) => {
               })
             })
           } else {
-  
+            // console.log(rows.length)
             res.status(403)
             res.json({
               auth: false,
@@ -79,13 +84,13 @@ exports.verificar = (req, res, next) => {
     }
    
     jwt.verify(token, process.env.SECRET, (err, decoded) => {
-     
       if (err){
         res.status(500)
         res.send({
           auth: false,
           message: 'Falha de autenticação'
         })
+        next()
       } else {
         next()
       }
