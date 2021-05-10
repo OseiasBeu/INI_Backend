@@ -23,6 +23,7 @@ conexao.connect();
 exports.login = (req, res) => {
     const email = req.body.email
     const senha = req.body.senha
+    console.log('chegou')
     // bcrypt.hash(senha, 10).then((res) => console.log(res));
   
     const query = 'select * from usuarios where email = $1'
@@ -37,19 +38,24 @@ exports.login = (req, res) => {
         })
      
       } else if (rows['rows'].length > 0){
-        console.log(senha)
-        console.log(rows['rows'][0].senha)
+        // console.log(senha)
+        // console.log(rows['rows'][0].senha)
         bcrypt.compare(senha, rows['rows'][0].senha, (err, resp) => {
-          console.log(resp)
+          // console.log(resp)
           if (resp){
             const usuario = rows['rows'][0].id
-            console.log(usuario)
+            // console.log(usuario)
             jwt.sign({usuario}, process.env.SECRET, {expiresIn: 30}, (err, token) => {
               res.status(200)
               res.json({
                 auth: true,
                 token: token
               })
+              // localStorage.setItem("lastname", "Smith");
+              // window.sessionStorage.setItem('access_token', token)
+
+
+              // console.log(token)
             })
           } else {
             // console.log(rows.length)
@@ -72,8 +78,10 @@ exports.login = (req, res) => {
 
 // função para verificar autorização para uso de um usuario
 exports.verificar = (req, res, next) => {
-    const token = req.headers['access-token']
-   
+  // console.log(req.headers['access_token'])
+    // console.log(window.localStorage.getItem('access_token'))
+    const token = req.headers['access_token']
+    // console.log(token)
     if (!token){
       res.status(401)
       res.send({

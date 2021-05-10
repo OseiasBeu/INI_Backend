@@ -18,10 +18,10 @@
 - [x] Exibir artigos no frontend
 - [x] Criar uma rota para vizualização de todas as categorias e não somenta as que ainda não foram concluidas
 - [x] Fazer adição do atributo do url da imagem nos eventos
+- [x] Fazer Autenticação JWT
 - [ ] Criar LP de login
 - [ ] Adicionar atributo link da imagem ao campo de inserção - admin
 - [ ] Ainda falta criar a nova rota de lsitagem de produtos
-- [x] Fazer Autenticação JWT
 - [ ] Criar rota para apenas para as listagens de adm- admin
 - [ ] Incluir formulário de alteração de eventos - admin
 - [ ] Incluir formulário de remoção de eventos - admin
