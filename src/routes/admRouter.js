@@ -7,6 +7,8 @@ const apiController = require('../controllers/apiController')
 router.get('/eventos',apiController.verificar, admController.listarEventos)
 router.post('/inserirevento',apiController.verificar, admController.inserirEvento)
 router.delete('/:id',apiController.verificar, admController.deletarEvento)
+router.put('/:id',apiController.verificar, admController.alterarEvento)
+
 
 // Lista de rotas categorias
 router.get('/categorias',apiController.verificar, admController.listarCategorias)

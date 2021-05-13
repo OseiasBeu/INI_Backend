@@ -19,19 +19,22 @@
 - [x] Criar uma rota para vizualização de todas as categorias e não somenta as que ainda não foram concluidas
 - [x] Fazer adição do atributo do url da imagem nos eventos
 - [x] Fazer Autenticação JWT
-- [ ] Criar LP de login
-- [ ] Adicionar atributo link da imagem ao campo de inserção - admin
-- [ ] Ainda falta criar a nova rota de lsitagem de produtos
-- [ ] Criar rota para apenas para as listagens de adm- admin
-- [ ] Incluir formulário de alteração de eventos - admin
-- [ ] Incluir formulário de remoção de eventos - admin
+- [x] Criar LP de login
+- [x] Adicionar atributo link da imagem ao campo de inserção - admin
+- [x] Ainda falta criar a nova rota de lsitagem de produtos
+- [x] Criar rota para apenas para as listagens de adm- admin
+- [x] Incluir formulário de alteração de eventos - admin
+- [x] Incluir campo de url (imagem) par eventos
+- [ ] ~~Incluir formulário de remoção de eventos - admin~~
+- [ ] Remover a opção de realizado na inserção de um evento novo - admin
+- [ ] Fazer a limpeza do innerhtml dos componentes de todos os eventos e todas as categorias na execução - admin
 - [ ] Verificar bug de agenda no index
 - [ ] Adicionar imagens corretas ao index
 - [ ] Adicionar textos corretos ao index
 - [ ] Alterar fonte do texto no index
 - [ ] Alterar cores do index
-- [ ] Incluir campo de url (imagem) par eventos
-- [ ] Estruturar uma servidor de imagens gratuito 
+- [ ] Estruturar um servidor de imagens gratuito
 - [ ] Adicionar hiperlink nas opções do menu
+- [ ] Remover rotas que não são mais necessárias
 
 

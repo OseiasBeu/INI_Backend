@@ -18,7 +18,6 @@ const conexao = new Client ({
 
 conexao.connect();
 
-
 // Função para realizar logon
 exports.login = (req, res) => {
     const email = req.body.email
@@ -51,11 +50,6 @@ exports.login = (req, res) => {
                 auth: true,
                 token: token
               })
-              // localStorage.setItem("lastname", "Smith");
-              // window.sessionStorage.setItem('access_token', token)
-
-
-              // console.log(token)
             })
           } else {
             // console.log(rows.length)
@@ -78,10 +72,7 @@ exports.login = (req, res) => {
 
 // função para verificar autorização para uso de um usuario
 exports.verificar = (req, res, next) => {
-  // console.log(req.headers['access_token'])
-    // console.log(window.localStorage.getItem('access_token'))
     const token = req.headers['access_token']
-    // console.log(token)
     if (!token){
       res.status(401)
       res.send({

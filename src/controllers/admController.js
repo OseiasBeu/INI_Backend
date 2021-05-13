@@ -1,4 +1,4 @@
-// Se vamos acessar um banco de dados precisamos do módulo que faz isso
+// Fazendo conexão com o banco de dados
 
 const { Client } = require('pg');
 
@@ -38,10 +38,10 @@ exports.inserirEvento = (req, response) => {
     tarefa.data = req.body.data
     tarefa.realizado = req.body.realizado
     tarefa.categoria_id = req.body.categoria_id
+    tarefa.linkimagem = req.body.linkimagem
+    const query = 'insert into public.tarefas (descricao, data, realizado, categoria_id, linkimagem) values ($1, $2, $3, $4, $5)'
     
-    const query = 'insert into public.tarefas (descricao, data, realizado, categoria_id) values ($1, $2, $3, $4)'
-    
-    conexao.query(query, [tarefa.descricao, tarefa.data, tarefa.realizado, tarefa.categoria_id], (err, result) => {
+    conexao.query(query, [tarefa.descricao, tarefa.data, tarefa.realizado, tarefa.categoria_id, tarefa.linkimagem], (err, result) => {
         if (err){
         console.log(err)
         response.status(500)
@@ -53,7 +53,6 @@ exports.inserirEvento = (req, response) => {
         }
     })
     }  
-
 
 exports.deletarEvento = (req, response) => {
 
@@ -77,6 +76,31 @@ exports.deletarEvento = (req, response) => {
         }
     })
     }
+
+exports.alterarEvento = (req, response) => {
+  const tarefa = {}
+  tarefa.id = req.params.id
+  tarefa.descricao = req.body.descricao
+  tarefa.data = req.body.data
+  tarefa.realizado = req.body.realizado
+  tarefa.categoria_id = req.body.categoria_id
+
+  const query = 'update public.tarefas set descricao = $1, data = $2, realizado = $3, categoria_id = $4 where id = $5'
+  conexao.query(query, [tarefa.descricao, tarefa.data, tarefa.realizado, tarefa.categoria_id, tarefa.id], (err, result) => {
+    if (err){
+      console.log(err)
+      response.status(500)
+      response.json({"message": "Internal Server Error"})
+    } else if (result.affectedRows > 0){
+      response.json({"message": "Tarefa alterada"})
+    } else {
+      // response.status(404)
+      // response.json({"message": "Tarefa não encontrada"})
+      response.status(202)
+      response.json({"message": "Tarefa alterada"})
+    }
+  })
+}
 
 //Categorias
 exports.listarCategorias = (req, response) => {

@@ -41,7 +41,6 @@ exports.listarTodas = (req, response) => {
   }
 
 
-
 exports.listarPorId = (req, response) => {
   const id = req.params.id
   const query = 'select * from tarefas where id = $1'
